@@ -34,8 +34,6 @@
   --color-text: var(--vt-c-text-light-1);
 
   --section-gap: 160px;
-  font-size: 15px;
-  --space: 12rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -73,4 +71,23 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@media (min-width: 1025px) {
+  :root {
+    font-size: 15px;
+    --space: calc((100vw - 62rem) / 2);
+  }
+}
+@media (max-width: 1024px) {
+  :root {
+    font-size: 17px;
+    --space: 3%;
+  }
+}
+@media (max-width: 767px) {
+  :root {
+    font-size: 15px;
+    --space: 8%;
+  }
 }

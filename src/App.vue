@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from "vue-router";
-import pcHeader from "./layout/header/pc-header.vue";
+import pcHeader from "./layout/header/header.vue";
+import FooterC from "./layout/footer/footer.vue";
 </script>
 
 <template>
@@ -8,7 +9,8 @@ import pcHeader from "./layout/header/pc-header.vue";
     <header>
       <pcHeader></pcHeader>
     </header>
-    <RouterView />
+    <RouterView class="main" />
+    <FooterC></FooterC>
   </div>
 </template>
 
@@ -25,6 +27,9 @@ import pcHeader from "./layout/header/pc-header.vue";
     top: 0;
     left: 0;
     z-index: 999;
+  }
+  .main {
+    width: 100%;
   }
 }
 </style>

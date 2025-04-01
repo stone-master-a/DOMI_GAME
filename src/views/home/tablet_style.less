@@ -1,0 +1,275 @@
+.container {
+  .barItem {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    > img {
+      width: 100%;
+      height: 30rem;
+      object-fit: cover;
+      object-position: 90% top;
+    }
+    .innerContainer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 3.25rem var(--space);
+      display: flex;
+      flex-direction: column;
+      > span:first-of-type {
+        color: #f90;
+        font-family: Inter;
+        font-size: 2.375rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+      > span:nth-of-type(2) {
+        color: #fff;
+        font-family: Inter;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin-bottom: 1rem;
+      }
+      > span:nth-of-type(3) {
+        color: #d7e6f5;
+        text-align: justify;
+        font-family: Inter;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.875rem; /* 187.5% */
+        width: 36rem;
+      }
+      > div:first-of-type {
+        display: flex;
+        width: 13rem;
+        height: 3rem;
+        padding: 0.8125rem 4.25rem;
+        border-radius: 0.1875rem;
+        background: #f90;
+        color: white;
+        box-shadow: 0px 6px 6px 0px #3e0f03;
+        cursor: pointer;
+        margin-top: 1.75rem;
+      }
+    }
+  }
+  .notice {
+    background: #5269fd;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 0 var(--space);
+    > span:nth-child(1) {
+      color: #fff;
+      font-family: Inter;
+      font-size: 2.375rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      text-align: center;
+      margin: 2rem 0;
+    }
+    > span:nth-child(2) {
+      color: #d7e6f5;
+      text-align: justify;
+      font-family: Inter;
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.875rem; /* 187.5% */
+      margin-bottom: 1.75rem;
+    }
+  }
+  .whatWay_container {
+    .box {
+      display: flex;
+      flex-wrap: wrap;
+      //   grid-template-columns: repeat(3, 1fr);
+      padding: 2.5rem var(--space);
+      gap: 1.5rem 36px;
+      justify-content: center;
+
+      .box_item {
+        width: 29%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.62rem 1.5rem;
+        border-radius: 1.25rem;
+        background: #fff;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+        padding: 0.5rem;
+        &:nth-of-type(even) {
+          justify-self: flex-end;
+        }
+        > img {
+          width: 100%;
+        }
+        > span:nth-of-type(1) {
+          color: #0e3a66;
+          font-family: Inter;
+          font-size: 1.75rem;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          margin-top: 0.5rem;
+        }
+        > span:nth-of-type(2) {
+          color: #666;
+          font-family: Inter;
+          font-size: 0.8rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+        &:nth-last-child(1),
+        &:nth-last-child(2) {
+          flex-grow: 0;
+        }
+      }
+    }
+  }
+  .whyChoose_container {
+    .box {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      padding: 2.5rem var(--space);
+      gap: 1.5rem;
+      justify-content: center;
+
+      .box_item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        > div:first-of-type {
+          width: 9.5rem;
+          height: 9.5rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 1.25rem;
+          border: 1px solid #5269fd;
+          margin-bottom: 1rem;
+          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+          > img {
+            width: 6.25rem;
+          }
+        }
+        > span:first-of-type {
+          color: #0e3a66;
+          text-align: center;
+          font-family: Inter;
+          font-size: 1.5rem;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+        > span:nth-of-type(2) {
+          color: #666;
+          text-align: center;
+          font-family: Inter;
+          font-size: 1rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 1.5rem; /* 150% */
+          width: 16rem;
+          margin-top: 0.2rem;
+        }
+        &:last-of-type {
+          grid-column: span 2;
+        }
+      }
+    }
+  }
+  .levelOfSecurity_container {
+    .box {
+      padding: 2.5rem var(--space);
+
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      .box_item {
+        width: 22%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.62rem;
+        > div:first-of-type {
+          width: 8rem;
+          height: 8rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: center/contain no-repeat
+            url("/public//imgs/home//hexagon.svg");
+          > img {
+            width: 4.5rem;
+            height: 4.5rem;
+          }
+        }
+        > span:first-of-type {
+          color: #0e3a66;
+          text-align: center;
+          font-family: Inter;
+          font-size: 1.25rem;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 1.875rem; /* 150% */
+        }
+      }
+    }
+  }
+  .aboutMe_container {
+    position: relative;
+    .bgImg {
+      width: 100%;
+      height: 28.5rem;
+      object-fit: cover;
+    }
+    .content_container {
+      position: absolute;
+      top: 0;
+      left: calc((100vw - 40rem) / 2);
+      padding: 2rem var(--space);
+      display: flex;
+      flex-direction: column;
+      width: 40rem;
+      > span {
+        color: #d7e6f5;
+        text-align: justify;
+        font-family: Inter;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.875rem; /* 187.5% */
+        > span {
+          color: #fff;
+          font-size: 1rem;
+          font-weight: 600;
+          line-height: 1.875rem;
+        }
+      }
+      > span:first-of-type {
+        color: #fff;
+        text-align: center;
+
+        font-family: Inter;
+        font-size: 2.375rem;
+        font-weight: 700;
+        margin: 1rem 0 2rem;
+      }
+    }
+  }
+  .brand_container {
+    padding: 3.5rem calc(var(--space) - 10%);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem 0;
+    justify-content: center;
+    justify-items: center;
+  }
+}
