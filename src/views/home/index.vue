@@ -1,18 +1,17 @@
 <template>
   <div class="container">
-    <ElCarousel :interval="5000" height="25rem">
-      <ElCarouselItem v-for="item of imageBarList">
-        <div class="barItem">
-          <img :src="item.path" />
-          <div class="innerContainer">
-            <span>{{ $t("home.ADTitle") }}</span>
-            <span>DOMI GAMES</span>
-            <span>{{ $t("home.ADcontent") }}</span>
-            <div>{{ $t("home.ADButton") }}</div>
-          </div>
-        </div>
-      </ElCarouselItem>
-    </ElCarousel>
+    <!-- <ElCarousel :interval="5000" height="25rem">
+      <ElCarouselItem v-for="item of imageBarList"> -->
+    <div class="barItem">
+      <div class="innerContainer">
+        <span>{{ $t("home.ADTitle") }}</span>
+        <span>DOMI GAMES</span>
+        <span>{{ $t("home.ADcontent") }}</span>
+        <div>{{ $t("home.ADButton") }}</div>
+      </div>
+    </div>
+    <!-- </ElCarouselItem>
+    </ElCarousel> -->
     <div class="whatWay_container">
       <div class="notice">
         <span>{{ $t("home.whatWay_t") }}</span>
@@ -64,7 +63,6 @@
       </div>
     </div>
     <div class="aboutMe_container">
-      <img class="bgImg" src="/public/imgs/home/aboutMe_bg.png" />
       <div class="content_container">
         <span>{{ $t("home.aboutMe_title") }}</span>
         <span>{{ $t("home.aboutMe_content1") }}</span>
@@ -86,12 +84,12 @@
 
 <script setup lang="ts">
 import { ElCarousel, ElCarouselItem } from "element-plus";
-import { ref } from "vue";
+import { computed, ref } from "vue";
 import { useI18n } from "vue-i18n";
 const { t } = useI18n();
 const imageBarList = ref([{ path: "/imgs/home/bar.png" }]);
 
-const whatWayBoxList = [
+const whatWayBoxList = computed(() => [
   {
     image: "/imgs/home/whatWay1.png",
     title: t("home.whatWay_b_t1"),
@@ -132,9 +130,9 @@ const whatWayBoxList = [
     title: t("home.whatWay_b_t8"),
     content: t("home.whatWay_b_c1"),
   },
-];
+]);
 
-const wayChooseBoxList = [
+const wayChooseBoxList = computed(() => [
   {
     image: "/imgs/home/whyChoose1.png",
     title: t("home.whyChoose_b_t1"),
@@ -180,8 +178,8 @@ const wayChooseBoxList = [
     title: t("home.whyChoose_b_t9"),
     content: t("home.whyChoose_b_c9"),
   },
-];
-const levelOfSecurityBoxList = [
+]);
+const levelOfSecurityBoxList = computed(() => [
   {
     image: "/imgs/home/levelOfSecurity1.svg",
     title: t("home.levelOfSecurity_b_t1"),
@@ -210,7 +208,7 @@ const levelOfSecurityBoxList = [
     image: "/imgs/home/levelOfSecurity7.svg",
     title: t("home.levelOfSecurity_b_t7"),
   },
-];
+]);
 </script>
 
 <style lang="less" scoped>

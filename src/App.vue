@@ -30,6 +30,7 @@ import FooterC from "./layout/footer/footer.vue";
   }
   .main {
     width: 100%;
+    min-height: calc(100vh - 3.5rem);
   }
 }
 </style>

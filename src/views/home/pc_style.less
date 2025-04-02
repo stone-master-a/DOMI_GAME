@@ -2,16 +2,10 @@
   .barItem {
     width: 100%;
     position: relative;
-    > img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 30rem;
-    }
+    background: url("/imgs/home/bar.png") 80% / cover;
     .innerContainer {
       position: relative;
-      z-index:99;
+      z-index: 99;
       padding: 3.25rem var(--space);
       display: flex;
       flex-direction: column;
@@ -219,14 +213,8 @@
   }
   .aboutMe_container {
     position: relative;
-    .bgImg {
-      width: 100%;
-      height: 28.5rem;
-      object-fit: cover;
-    }
+    background: url("/public/imgs/home/aboutMe_bg.png") center/cover;
     .content_container {
-      position: absolute;
-      top: 0;
       padding: 2rem var(--space);
       display: flex;
       flex-direction: column;

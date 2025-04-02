@@ -2,7 +2,7 @@
   <div class="headerContainer">
     <img class="logo" src="/public/imgs/logo.png" />
     <div class="buttonGroup">
-      <ElButton class="elbutton">
+      <ElButton class="elbutton" style="display: none">
         <img src="/public/imgs/header/user.svg" />
         <span class="text">{{ $t("header.login") }}</span>
       </ElButton>
@@ -47,7 +47,7 @@
     </ElDrawer>
   </div>
   <!-- pc端导航 -->
-  <div class="navigationBar">
+  <div class="navigationBar" :lang="locale">
     <div
       :class="['item', item.path == location ? 'checked' : '']"
       v-for="item of navigationBarList"
@@ -64,35 +64,14 @@
 
 <script setup lang="ts">
 import { MoreFilled, CloseBold } from "@element-plus/icons-vue";
-import router from "@/router";
+import router, { getNavigationList } from "@/router";
 import langChange from "./components/langChange.vue";
 import { ref } from "vue";
 import { useI18n } from "vue-i18n";
 import { ElDrawer, ElIcon } from "element-plus";
-const { t } = useI18n();
+const { t, locale } = useI18n();
 
-const navigationBarList = [
-  { name: t("header.navigator1"), icon: "imgs/header/navigator1", path: "/" },
-  {
-    name: t("header.navigator2"),
-    icon: "imgs/header/navigator2",
-    path: "/synthesis",
-  },
-  {
-    name: t("header.navigator3"),
-    icon: "imgs/header/navigator3",
-    path: "/lottery",
-  },
-  { name: t("header.navigator4"), icon: "imgs/header/navigator4" },
-  { name: t("header.navigator5"), icon: "imgs/header/navigator5" },
-  { name: t("header.navigator6"), icon: "imgs/header/navigator6" },
-  { name: t("header.navigator7"), icon: "imgs/header/navigator7" },
-  { name: t("header.navigator8"), icon: "imgs/header/navigator8" },
-  { name: t("header.navigator9"), icon: "imgs/header/navigator9" },
-  { name: t("header.navigator10"), icon: "imgs/header/navigator10" },
-  { name: t("header.navigator11"), icon: "imgs/header/navigator11" },
-  { name: t("header.navigator12"), icon: "imgs/header/navigator12" },
-];
+const navigationBarList = getNavigationList();
 const location = ref(window.location.pathname);
 
 function gotoHandler(path: any): void {

@@ -65,5 +65,12 @@
     "aboutMe_content2": "To become a global industry leader delivering unparalleled experiences and business solutions. We believe the fusion of technology and creativity will shape the industry's future.",
     "aboutMe_content3_t": "Our Mission:",
     "aboutMe_content3": "To provide one-stop industry solutions enabling quick launch and continuous optimization. Through innovative technology, customized services, and industry best practices, we're committed to our clients' success."
+  },
+  "other": {
+    "demoStation": "Lottery White Label Demo Site",
+    "account": "Account",
+    "password": "Password",
+    "demo": "Demo",
+    "desc": "Lottery White Label is a professional online lottery system solution that provides turnkey technical support and operational services, enabling businesses to quickly establish a complete lottery platform."
   }
 }

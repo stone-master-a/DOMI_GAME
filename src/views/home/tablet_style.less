@@ -4,16 +4,14 @@
     position: relative;
     display: flex;
     justify-content: center;
-    > img {
-      width: 100%;
-      height: 30rem;
-      object-fit: cover;
-      object-position: 90% top;
-    }
+    background: url("/imgs/home/bar.png") 80% / cover;
+    // > img {
+    //   width: 100%;
+    //   height: 30rem;
+    //   object-fit: cover;
+    //   object-position: 90% top;
+    // }
     .innerContainer {
-      position: absolute;
-      top: 0;
-      left: 0;
       padding: 3.25rem var(--space);
       display: flex;
       flex-direction: column;
@@ -48,7 +46,8 @@
         display: flex;
         width: 13rem;
         height: 3rem;
-        padding: 0.8125rem 4.25rem;
+        justify-content: center;
+        align-items: center;
         border-radius: 0.1875rem;
         background: #f90;
         color: white;
@@ -118,6 +117,7 @@
           font-weight: 700;
           line-height: normal;
           margin-top: 0.5rem;
+          word-break: break-all;
         }
         > span:nth-of-type(2) {
           color: #666;
@@ -226,14 +226,8 @@
   }
   .aboutMe_container {
     position: relative;
-    .bgImg {
-      width: 100%;
-      height: 28.5rem;
-      object-fit: cover;
-    }
+    background: url("/public/imgs/home/aboutMe_bg.png") center/cover;
     .content_container {
-      position: absolute;
-      top: 0;
       left: calc((100vw - 40rem) / 2);
       padding: 2rem var(--space);
       display: flex;

@@ -5,6 +5,9 @@
   width: 100vw;
   font-weight: normal;
 }
+img {
+  -webkit-user-drag: none;
+}
 
 a,
 .green {

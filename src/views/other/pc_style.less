@@ -1,0 +1,74 @@
+.header {
+  position: relative;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .text_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 99;
+    color: white;
+    margin: 5.6rem 0;
+    .title {
+      font-family: Inter;
+      font-size: 2.375rem;
+      font-weight: 700;
+      text-align: center;
+    }
+    .account_box {
+      border-radius: 0.9375rem;
+      border: 2px solid #fff;
+      background: rgba(82, 105, 253, 0.8);
+      padding: 1rem 3.4rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 1.5rem;
+      margin-top: 2rem;
+    }
+    .button {
+      display: flex;
+      width: 13rem;
+      height: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 0.1875rem;
+      background: #f90;
+      color: white;
+      box-shadow: 0px 6px 6px 0px #3e0f03;
+      cursor: pointer;
+      margin-top: 4rem;
+      background: linear-gradient(90deg, #f90, rgb(255, 213, 151));
+      background-size: 400% 100%;
+      background-position: 0% 0;
+      transition: all 1s ease;
+      &:hover {
+        background-position: 100% 0;
+      }
+    }
+  }
+}
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  > span:nth-child(1) {
+    color: #0e3a66;
+    font-family: Inter;
+    font-size: 2.375rem;
+    font-weight: 700;
+    margin: 2rem 0;
+  }
+  > span:nth-child(2) {
+    color: #666;
+    text-align: center;
+    font-family: Inter;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.875rem; /* 187.5% */
+    width: 47rem;
+  }
+}
