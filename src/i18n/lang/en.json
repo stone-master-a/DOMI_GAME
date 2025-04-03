@@ -29,6 +29,13 @@
     "whatWay_b_t7": "Wealth Management",
     "whatWay_b_t8": "Staking",
     "whatWay_b_c1": "Covers the most common game types in the current online gaming market, including lottery, board games, live casino, sports betting, esports, fishing games, and slot machines (also known as electronic games).",
+    "whatWay_b_c2": "Provides an all-in-one online lottery system, supporting multiple lottery types, multi-level agency, and real-time draw, suitable for lottery operators and agents.",
+    "whatWay_b_c3": "Upgraded lottery system with added intelligent risk control, new gameplay, customizable UI/UX, and big data analytics to enhance user experience and security.",
+    "whatWay_b_c4": "TikTok Shop is a social e-commerce platform based on short videos and live streaming commerce, allowing users to directly browse, purchase and sell products on TikTok, combining the 'grass planting' model of short videos with live-streaming sales to create a new shopping experience.",
+    "whatWay_b_c5": "A task-matching platform where users can grab orders to complete tasks and earn rewards, supporting real-time settlement and anti-fraud mechanisms.",
+    "whatWay_b_c6": "Offers various trading modes including spot, futures, and leverage trading, with API integration, KYC verification, and risk management support.",
+    "whatWay_b_c7": "Supports fixed-term, flexible financial management and yield management, providing secure and compliant digital asset investment and dividend functions.",
+    "whatWay_b_c8": "Supports collateralized loans using digital currencies, NFTs and other assets, providing automatic liquidation and risk control systems to ensure asset security.",
 
     "whyChoose_t": "Why choose DG White Label?",
     "whyChoose_c": "DG White Label offers 9 major advantages. We deeply understand operational needs and market demands for products. With years of system R&D achievements, we provide stable and reliable system architecture that fits various business models, enabling you to launch your venture quickly at reasonable costs. Tiancheng offers all-terminal platforms with no hidden fees or deposits. Purchase credits anytime as needed. No technical worries or expensive development costs - focus on your market operations.",
@@ -72,5 +79,18 @@
     "password": "Password",
     "demo": "Demo",
     "desc": "Lottery White Label is a professional online lottery system solution that provides turnkey technical support and operational services, enabling businesses to quickly establish a complete lottery platform."
+  },
+  "gameAPI": {
+    "1": "Minesweeper",
+    "2": "Fortune Tiger",
+    "3": "Money Rabbit",
+    "4": "Dragon vs Tiger",
+    "5": "Sic Bo",
+    "6": "Baccarat",
+    "7": "Fan Tan",
+    "8": "Red Black Battle",
+    "9": "Bull Bull",
+    "10": "Color Dice",
+    "11": "Fish-Prawn-Crab"
   }
 }

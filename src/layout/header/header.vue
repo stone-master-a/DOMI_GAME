@@ -81,7 +81,7 @@ function gotoHandler(item: NavigationItem): void {
       target?.scrollIntoView({ behavior: "smooth" });
     }, 100);
   } else if (item.name == "home") {
-    const scrollToTop = () => {
+    setTimeout(() => {
       const scrollStep = -window.scrollY / (500 / 15); // 500ms duration, 15ms interval
       const scrollInterval = setInterval(() => {
         if (window.scrollY !== 0) {
@@ -90,8 +90,7 @@ function gotoHandler(item: NavigationItem): void {
           clearInterval(scrollInterval);
         }
       }, 15);
-      setTimeout(scrollToTop, 0);
-    };
+    }, 100);
   } else if (item.name == "technicalSupport") {
     window.location.href = import.meta.env.VITE_TECHNICAL_SUPPORT_URL;
     return;

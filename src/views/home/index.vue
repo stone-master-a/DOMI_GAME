@@ -104,37 +104,37 @@ const whatWayBoxList = computed(() => [
   {
     image: "/imgs/home/whatWay2.png",
     title: t("home.whatWay_b_t2"),
-    content: t("home.whatWay_b_c1"),
+    content: t("home.whatWay_b_c2"),
   },
   {
     image: "/imgs/home/whatWay3.png",
     title: t("home.whatWay_b_t3"),
-    content: t("home.whatWay_b_c1"),
+    content: t("home.whatWay_b_c3"),
   },
   {
     image: "/imgs/home/whatWay4.png",
     title: t("home.whatWay_b_t4"),
-    content: t("home.whatWay_b_c1"),
+    content: t("home.whatWay_b_c4"),
   },
   {
     image: "/imgs/home/whatWay5.png",
     title: t("home.whatWay_b_t5"),
-    content: t("home.whatWay_b_c1"),
+    content: t("home.whatWay_b_c5"),
   },
   {
     image: "/imgs/home/whatWay6.png",
     title: t("home.whatWay_b_t6"),
-    content: t("home.whatWay_b_c1"),
+    content: t("home.whatWay_b_c6"),
   },
   {
     image: "/imgs/home/whatWay7.png",
     title: t("home.whatWay_b_t7"),
-    content: t("home.whatWay_b_c1"),
+    content: t("home.whatWay_b_c7"),
   },
   {
     image: "/imgs/home/whatWay8.png",
     title: t("home.whatWay_b_t8"),
-    content: t("home.whatWay_b_c1"),
+    content: t("home.whatWay_b_c8"),
   },
 ]);
 
