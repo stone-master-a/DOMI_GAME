@@ -43,11 +43,19 @@
         justify-content: center;
         align-items: center;
         border-radius: 0.1875rem;
-        background: #f90;
         color: white;
         box-shadow: 0px 6px 6px 0px #3e0f03;
         cursor: pointer;
         margin-top: 1.75rem;
+        background: linear-gradient(90deg, #f90, rgb(255, 236, 208));
+        background-size: 400% 100%;
+        background-position: 0% 0;
+        transition: all 1s ease;
+        &:hover {
+          background-position: 100% 0;
+          color: black;
+          font-weight: bold;
+        }
       }
     }
   }
@@ -94,6 +102,7 @@
         background: #fff;
         box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
         padding: 0.5rem;
+        // translate:-60vw;
         &:nth-of-type(even) {
           justify-self: flex-end;
         }
@@ -211,9 +220,9 @@
       }
     }
   }
-  .aboutMe_container {
+  .aboutUs_container {
     position: relative;
-    background: url("/public/imgs/home/aboutMe_bg.png") center/cover;
+    background: url("/public/imgs/home/aboutUs_bg.png") center/cover;
     .content_container {
       padding: 2rem var(--space);
       display: flex;

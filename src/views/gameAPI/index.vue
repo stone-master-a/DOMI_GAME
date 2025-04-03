@@ -3,8 +3,13 @@
     <img src="/public/imgs/gameAPI/bg.png" />
   </div>
   <div class="project_container">
-    <div class="item" v-for="item of List" :key="item.img">
-      <img src="/public/imgs/gameAPI/1.png" />
+    <div
+      class="item"
+      v-for="item of List"
+      :key="item.img"
+      :style="`background-image: url(${item.img})`"
+    >
+      <img src="/public/imgs/gameAPI/logo.png" />
       <span>DG</span>
       <span>{{ item.name }}</span>
     </div>
@@ -85,4 +90,82 @@ const List = ref([
   },
 ]);
 </script>
-<style lang="less" scoped></style>
+<style lang="less" scoped>
+.background_box {
+  width: 100%;
+  > img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+.project_container {
+  width: 100%;
+  display: grid;
+
+  gap: 1.5rem;
+  padding: 2rem var(--space);
+  .item {
+    aspect-ratio: 1/1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-position: center;
+    background-size: contain;
+    padding: 0 0.8rem;
+    > img {
+      width: 4.5rem;
+      height: 4.5rem;
+    }
+    span:nth-of-type(1) {
+      font-size: 20px;
+      font-weight: 400;
+      color: #ffffff;
+      flex-grow: 1;
+    }
+    span:nth-of-type(2) {
+      color: #0e3a66;
+      font-family: Inter;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+  }
+}
+@media (min-width: 1025px) {
+  .project_container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .project_container {
+    grid-template-columns: repeat(3, 1fr);
+    .item {
+      padding: 0 0.4rem;
+
+      > img {
+        width: 3.8rem;
+        height: 3.8rem;
+      }
+      > span:nth-of-type(2) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .project_container {
+    grid-template-columns: repeat(2, 1fr);
+    .item {
+      padding: 0 0.2rem;
+
+      > img {
+        width: 2.8rem;
+        height: 2.8rem;
+      }
+      > span:nth-of-type(2) {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+</style>

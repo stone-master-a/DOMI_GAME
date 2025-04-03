@@ -1,8 +1,10 @@
 <template>
-  <div class="footer">Copyright © 2024 .</div>
+  <div class="footer">{{ copyright }}</div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const copyright = import.meta.env.VITE_COPYRIGHT;
+</script>
 
 <style lang="less">
 .footer {

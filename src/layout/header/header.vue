@@ -37,10 +37,10 @@
         <div
           :class="['item', item.path == location ? 'checked' : '']"
           v-for="item of navigationBarList"
-          @click="gotoHandler(item.path)"
+          @click="gotoHandler(item)"
         >
           <img class="svg-object" :src="item.icon + 'c.svg'" />
-          <span>{{ item.name }}</span>
+          <span>{{ item.title }}</span>
         </div>
         <langChange class="langChange"></langChange>
       </div>
@@ -51,22 +51,22 @@
     <div
       :class="['item', item.path == location ? 'checked' : '']"
       v-for="item of navigationBarList"
-      @click="gotoHandler(item.path)"
+      @click="gotoHandler(item)"
     >
       <img
         class="svg-object"
         :src="item.icon + (item.path == location ? 'c' : '') + '.svg'"
       />
-      <span>{{ item.name }}</span>
+      <span>{{ item.title }}</span>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { MoreFilled, CloseBold } from "@element-plus/icons-vue";
-import router, { getNavigationList } from "@/router";
+import router, { getNavigationList, type NavigationItem } from "@/router";
 import langChange from "./components/langChange.vue";
-import { ref } from "vue";
+import { nextTick, ref } from "vue";
 import { useI18n } from "vue-i18n";
 import { ElDrawer, ElIcon } from "element-plus";
 const { t, locale } = useI18n();
@@ -74,9 +74,30 @@ const { t, locale } = useI18n();
 const navigationBarList = getNavigationList();
 const location = ref(window.location.pathname);
 
-function gotoHandler(path: any): void {
-  router.push(path);
-  location.value = path;
+function gotoHandler(item: NavigationItem): void {
+  if (item.name == "aboutUs") {
+    setTimeout(() => {
+      const target = document.getElementById("aboutUs");
+      target?.scrollIntoView({ behavior: "smooth" });
+    }, 100);
+  } else if (item.name == "home") {
+    const scrollToTop = () => {
+      const scrollStep = -window.scrollY / (500 / 15); // 500ms duration, 15ms interval
+      const scrollInterval = setInterval(() => {
+        if (window.scrollY !== 0) {
+          window.scrollBy(0, scrollStep);
+        } else {
+          clearInterval(scrollInterval);
+        }
+      }, 15);
+      setTimeout(scrollToTop, 0);
+    };
+  } else if (item.name == "technicalSupport") {
+    window.location.href = import.meta.env.VITE_TECHNICAL_SUPPORT_URL;
+    return;
+  }
+  router.push(item.path);
+  location.value = item.path;
   showNavigationDrawer.value = false;
 }
 

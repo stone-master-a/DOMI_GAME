@@ -46,7 +46,7 @@ onMounted(() => {
 });
 
 function gotoHref() {
-  window.location.href = "https://t.me/dayangpay88";
+  window.location.href = import.meta.env.VITE_DEMO_URL;
 }
 
 const envData = ref({

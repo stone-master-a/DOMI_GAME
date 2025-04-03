@@ -24,69 +24,87 @@ const router = createRouter({
 
 export default router;
 
+export type NavigationItem = {
+  path: string;
+  icon: string;
+  name: string;
+  title: string;
+};
 export function getNavigationList() {
   const { t } = useI18n();
   //导航栏
-  return computed(() => [
+  return computed<NavigationItem[]>(() => [
     {
-      name: t("header.navigator1"),
+      title: t("header.navigator1"),
       icon: "/imgs/header/navigator1",
       path: "/",
+      name: "home",
     },
     {
-      name: t("header.navigator2"),
+      title: t("header.navigator2"),
       icon: "/imgs/header/navigator2",
       path: "/other/synthesize",
+      name: "synthesize",
     },
     {
-      name: t("header.navigator3"),
+      title: t("header.navigator3"),
       icon: "/imgs/header/navigator3",
       path: "/other/lottery",
+      name: "lottery",
     },
     {
-      name: t("header.navigator4"),
+      title: t("header.navigator4"),
       icon: "/imgs/header/navigator4",
       path: "/other/lottery2.1",
+      name: "lottery2.1",
     },
     {
-      name: t("header.navigator5"),
+      title: t("header.navigator5"),
       icon: "/imgs/header/navigator5",
       path: "/other/TKShop",
+      name: "TKShop",
     },
     {
-      name: t("header.navigator6"),
+      title: t("header.navigator6"),
       icon: "/imgs/header/navigator6",
       path: "/other/shoppingMall",
+      name: "shoppingMall",
     },
     {
-      name: t("header.navigator7"),
+      title: t("header.navigator7"),
       icon: "/imgs/header/navigator7",
       path: "/other/exchange",
+      name: "exchange",
     },
     {
-      name: t("header.navigator8"),
+      title: t("header.navigator8"),
       icon: "/imgs/header/navigator8",
       path: "/other/moneyManagement",
+      name: "moneyManagement",
     },
     {
-      name: t("header.navigator9"),
+      title: t("header.navigator9"),
       icon: "/imgs/header/navigator9",
       path: "/other/pledge",
+      name: "pledge",
     },
     {
-      name: t("header.navigator10"),
+      title: t("header.navigator10"),
       icon: "/imgs/header/navigator10",
       path: "/gameAPI",
+      name: "gameAPI",
     },
     {
-      name: t("header.navigator11"),
+      title: t("header.navigator11"),
       icon: "/imgs/header/navigator11",
       path: "",
+      name: "technicalSupport",
     },
     {
-      name: t("header.navigator12"),
+      title: t("header.navigator12"),
       icon: "/imgs/header/navigator12",
-      path: "",
+      path: "/#aboutUs",
+      name: "aboutUs",
     },
   ]);
 }

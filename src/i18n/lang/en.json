@@ -59,12 +59,12 @@
     "levelOfSecurity_b_t5": "SSL encryption certificates",
     "levelOfSecurity_b_t6": "Encrypted data backups",
     "levelOfSecurity_b_t7": "DDoS attack protection",
-    "aboutMe_title": "About Us",
-    "aboutMe_content1": "Established in 2016, we are an innovative company making strides in the industry. We specialize in providing cutting-edge website development and White Label services to global clients. Our goal is to drive continuous industry development and innovation through exceptional technology and premium services.",
-    "aboutMe_content2_t": "Our Vision:",
-    "aboutMe_content2": "To become a global industry leader delivering unparalleled experiences and business solutions. We believe the fusion of technology and creativity will shape the industry's future.",
-    "aboutMe_content3_t": "Our Mission:",
-    "aboutMe_content3": "To provide one-stop industry solutions enabling quick launch and continuous optimization. Through innovative technology, customized services, and industry best practices, we're committed to our clients' success."
+    "aboutUs_title": "About Us",
+    "aboutUs_content1": "Established in 2016, we are an innovative company making strides in the industry. We specialize in providing cutting-edge website development and White Label services to global clients. Our goal is to drive continuous industry development and innovation through exceptional technology and premium services.",
+    "aboutUs_content2_t": "Our Vision:",
+    "aboutUs_content2": "To become a global industry leader delivering unparalleled experiences and business solutions. We believe the fusion of technology and creativity will shape the industry's future.",
+    "aboutUs_content3_t": "Our Mission:",
+    "aboutUs_content3": "To provide one-stop industry solutions enabling quick launch and continuous optimization. Through innovative technology, customized services, and industry best practices, we're committed to our clients' success."
   },
   "other": {
     "demoStation": "Lottery White Label Demo Site",

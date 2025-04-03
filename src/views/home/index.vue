@@ -7,7 +7,7 @@
         <span>{{ $t("home.ADTitle") }}</span>
         <span>DOMI GAMES</span>
         <span>{{ $t("home.ADcontent") }}</span>
-        <div>{{ $t("home.ADButton") }}</div>
+        <div @click="buildSitesHandler">{{ $t("home.ADButton") }}</div>
       </div>
     </div>
     <!-- </ElCarouselItem>
@@ -62,30 +62,36 @@
         </div>
       </div>
     </div>
-    <div class="aboutMe_container">
+    <div class="aboutUs_container" id="aboutUs">
       <div class="content_container">
-        <span>{{ $t("home.aboutMe_title") }}</span>
-        <span>{{ $t("home.aboutMe_content1") }}</span>
+        <span>{{ $t("home.aboutUs_title") }}</span>
+        <span>{{ $t("home.aboutUs_content1") }}</span>
         <span>
-          <span>{{ $t("home.aboutMe_content2_t") }}</span>
-          {{ $t("home.aboutMe_content2") }}</span
+          <span>{{ $t("home.aboutUs_content2_t") }}</span>
+          {{ $t("home.aboutUs_content2") }}</span
         >
         <span>
-          <span>{{ $t("home.aboutMe_content2_t") }}</span>
-          {{ $t("home.aboutMe_content3") }}</span
+          <span>{{ $t("home.aboutUs_content2_t") }}</span>
+          {{ $t("home.aboutUs_content3") }}</span
         >
       </div>
     </div>
     <div class="brand_container">
-      <img v-for="item of 12" :src="`/imgs/home/${item}.png`" />
+      <img class="brand_item" v-for="item of 12" :src="`/imgs/home/${item}.png`" />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { ElCarousel, ElCarouselItem } from "element-plus";
-import { computed, ref } from "vue";
+import { computed, onMounted, ref } from "vue";
 import { useI18n } from "vue-i18n";
+import {
+  DeviceType,
+  getDeviceType,
+  bindAnimation,
+  animeTypeMap,
+} from "@/tools/util";
 const { t } = useI18n();
 const imageBarList = ref([{ path: "/imgs/home/bar.png" }]);
 
@@ -209,6 +215,17 @@ const levelOfSecurityBoxList = computed(() => [
     title: t("home.levelOfSecurity_b_t7"),
   },
 ]);
+
+function buildSitesHandler() {
+  window.location.href = import.meta.env.VITE_BUILD_SITE_URL;
+}
+
+onMounted(() => {
+  // if (getDeviceType() == DeviceType.Desktop) {
+  bindAnimation("box_item", animeTypeMap.translate);
+  bindAnimation("brand_item", animeTypeMap.gridAime);
+  // }
+});
 </script>
 
 <style lang="less" scoped>
