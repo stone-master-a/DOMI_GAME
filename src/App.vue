@@ -6,6 +6,7 @@ import FooterC from "./layout/footer/footer.vue";
 
 <template>
   <div class="appBox">
+    <div class="placeholder"></div>
     <header>
       <pcHeader></pcHeader>
     </header>
@@ -14,16 +15,20 @@ import FooterC from "./layout/footer/footer.vue";
   </div>
 </template>
 
-<style scoped>
+<style lang="less" scoped>
 .appBox {
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
+  .placeholder {
+    height: 4rem;
+    width: 100%;
+  }
   header {
     width: 100%;
     background: white;
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 999;

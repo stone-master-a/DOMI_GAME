@@ -25,7 +25,7 @@ import anime from "animejs/lib/anime.es.js";
 function translate(element: HTMLElement | Element) {
   return anime({
     targets: element,
-    translateX: "-100vw",
+    translateX: "-70vw",
     direction: "reverse",
     easing: "cubicBezier(.5, .05, .1, .3)",
     delay: anime.stagger(100),
@@ -59,11 +59,13 @@ function createIntersectionObserver(
 }
 
 export function bindAnimation(className: string, animeType: Function) {
-  const observe = createIntersectionObserver(className, (event) => {
+  const observer = createIntersectionObserver(className, (event) => {
     event.forEach((entry) => {
+      
       if (entry.isIntersecting) {
+        entry.target.style.opacity = "1";
         animeType.call(null, entry.target);
-        observe.unobserve(entry.target); // 取消观察
+        observer.unobserve(entry.target); // 取消观察
       } else {
       }
     });
